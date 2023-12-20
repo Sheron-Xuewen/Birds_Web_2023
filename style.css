@@ -1,0 +1,149 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.parallax-container {
+    width: 100%;
+}
+
+.parallax-box {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.background {
+    background-size: cover; /* 保持宽高比 */
+    background-position: center; /* 初始居中 */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.foreground {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+.image-section {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 380px; /* 考虑到 20px 的填充 */
+    border: 3px solid black; /* 添加黑色粗边框 */
+    box-shadow: 10px 10px 5px grey; /* 添加阴影 */
+}
+
+
+.text-section {
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2); /* 白色半透明背景 */
+    border: 3px solid black; /* 添加黑色粗边框 */
+    box-shadow: 10px 10px 5px grey; /* 添加阴影 */
+    padding: 20px; /* 内边距 */
+    margin: 20px; /* 外边距 */
+    backdrop-filter: blur(5px); /* 毛玻璃效果 */
+    max-width: 800px; /* 最大宽度，可根据需要调整 */
+    display: flex; /* 启用Flex布局 */
+}
+  
+  
+
+/* "图左文右" 布局样式 */
+.text-left .text-section {
+    flex-basis: 60%;
+    padding: 20px;
+}
+
+.text-left .image-section {
+    flex-basis: 40%;
+    padding: 20px;
+}
+
+/* "图右文左" 布局样式 */
+.text-right .text-section {
+    flex-basis: 60%;
+    padding: 20px;
+    order: 0; /* 将文字部分移至左侧 */
+}
+
+.text-right .image-section {
+    flex-basis: 40%;
+    padding: 20px;
+    order: 1; /* 将图片部分移至右侧 */
+}
+
+h1 {
+    text-align: center; /* 标题水平居中 */
+}
+  
+
+.intro-text, .outro-text {
+    margin: 20px 20px; /* Adds top and bottom margin of 20px, left and right margin of 40px */
+    padding: 20px; /* Adds padding inside the div */
+    text-align: justify; /* Justifies the text for better readability */
+    font-size: 16px; /* Sets the font size */
+    line-height: 1.6; /* Adjusts the line height for better readability */
+}
+
+.intro-text h2, .outro-text h2 {
+    text-align: center; /* Centers the title */
+    font-size: 48px; /* Adjust the font size for h2 as needed */
+    margin-bottom: 20px; /* Adds a space below the title */
+}
+
+/* Styling for the strong elements and paragraph text */
+.intro-text strong, .outro-text strong {
+    font-size: 16px; /* Adjust the font size for bold text as needed */
+    margin-bottom: 5px; /* Adds a small space after each bold text */
+}
+
+/* Styling for indentations and line spacing */
+.intro-text br, .outro-text br {
+    margin-bottom: 10px; /* Adds space after each line break */
+}
+
+/* Additional styling for indentation of text */
+.intro-text div, .outro-text div {
+    text-indent: 20px; /* Adds indentation to the paragraph text */
+    text-align: left; /* Aligns the text to the left */
+    margin-bottom: 10px; /* Adds a small space between paragraphs */
+}
+
+
+
+.outro-text {
+    margin: 20px 20px; /* Adds top and bottom margin of 20px, left and right margin of 40px */
+    padding: 20px; /* Adds padding inside the div */
+    text-align: justify; /* Justifies the text for better readability */
+    font-size: 16px; /* Sets the font size */
+    line-height: 1.6; /* Adjusts the line height for better readability */
+}
+
+.outro-text p {
+    margin: 0; /* Removes the default margin of paragraph */
+    padding: 0; /* Removes the default padding of paragraph */
+}
+
+h3 {
+    text-align: center; /* 标题水平居中 */
+    font-size: 20px;
+}
